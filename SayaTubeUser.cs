@@ -34,5 +34,28 @@ namespace modul6_1302190044
         {
 
         }
+        static double snfx(double x, double y)
+        {
+            if (y == 0)
+                throw new DivideByZeroException();
+            return x / y;
+        }
+        public static void Main()
+        {
+        
+            double a = 98, b = 0;
+            double result;
+            try
+            {
+                result = snfx(a, b);
+                Console.WriteLine("{0} divided by {1} = {2}", a, b,
+               result);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("0");
+            }
+        }
+
     }
 }
